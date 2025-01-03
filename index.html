@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- Inclusion du fichier css pour le style du jeu -->
+    <link rel="stylesheet" href="style/style.css">
+
+    <!-- Inclusion des 3 scripts nécessaires pour faire fonctionner le jeu -->
+    <!-- Attention, l'ordre des fichiers js est important.  -->
+    <!--  mot clé defer permet d'attendre que le body de la page html soit chargé en mémoire avant d'executer les fichiers scripts -->
+    <!-- diffère l'execution du script pour attendre que la page existe en mémoir-->
+    <script src="config.js" defer></script>
+    <!--  <script src="scripts/popup.js" defer></script> -->
+    <!--  <script src="scripts/scriptFunction.js" defer></script> -->
+    <!--  <script src="scripts/scriptRecupererElement.js" defer></script> -->
+    <!--  <script src="scripts/scriptLancerJeu.js" defer></script> -->
+    <!--  <script src="scripts/scriptLancerJeuInnerHTML.js" defer></script> -->
+    <script src="scripts/scriptAddEventListner.js" defer></script>
+    <script src="main.js" defer></script>
+</head>
+<body>
+    <!-- HEADER -->
+    <header>
+        <h1>AzerType</h1>
+        <h2>L'application pour écrire plus vite !</h2>
+        <h3>AzerType est une application en ligne pour apprendre à taper plus vite au clavier</h3>
+    </header>
+
+    <!-- <div class="zoneChoix">
+        <input type="radio" name="optionSource" id="mots" value="1" checked>
+        <label for="mots">Mots</label>
+        <input type="radio" name="optionSource" id="phrase" value="2">
+        <label for="phrases">Phrase</label>
+    </div>
+    <div id="zoneProposition">
+        Entrez le mot : <span>Cachalot</span>
+    </div> -->
+
+
+    <!-- MAIN -->
+    <main>
+        <div class="zoneOptions">
+            <p>Choisissez votre option et tapez la proposition qui s'affiche dans le champ en-dessous.</p>
+            <div class="optionSource">
+                <input type="radio" name="optionSource" id="mots" value="1" checked>
+                <label for="mots">Mots</label>
+                <input type="radio" name="optionSource" id="phrases" value="2">
+                <label for="phrases">Prases</label>
+            </div>
+        </div>
+
+        <div class="zoneProposition">
+            Azerty
+        </div>
+
+        <div class="zoneSaisie">
+            <input type="text" id="inputEcriture" name="inputEcriture">
+            <button id="btnValiderMot">Valider</button>
+        </div>
+
+        <div class="zoneScore">
+            Votre score : <span>0</span>
+        </div>
+
+        <div class="zonePartager">
+            <button>Partager</button>
+        </div>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer>
+        @Copyright : Openclasserooms.
+    </footer>
+
+    <!-- Popup de partage -->
+    <div class="popupBackground">
+        <div class="popup">
+            <div>Partager votre score</div>
+            <form novalidate>
+                <label for="nom">Votre nom</label>
+                <input type="text" id="nom" name="nom" placeholder="Votre nom">
+                <label for="email">Avec qui voulez-vous partager votre score ?</label>
+                <input type="email" id="email" name="email" placeholder="nom@domaine.com">
+                <button id="btnEnvoyerMail">Envoyer</button>
+            </form>
+        </div>
+    </div>
+
+    <!--img = balise pour afficher une image
+        id : l’identifiant de la div ;
+        src : l’emplacement de l’image ;
+        alt : le texte alternatif pour l’image ;
+        class : la liste des classes appliquées sur la balise image. -->
+    <img id="premiereImage" src="source/image.jpg" alt="Ceci est une image de test" class="photo flexCenter">
+    <div class="listeMots centree actif photo"></div>
+    <div id="conteneur">
+        Insertion de la balise
+    </div>
+
+    <button id="bouton1">Bouton 1</button>
+    <button id="bouton2">Bouton 2</button>
+</body>    
+</html>
