@@ -7,6 +7,7 @@
 
 
 /**
+ * 20250130
  * Cette fonction affiche la popup pour partager son score. 
  */
 function afficherPopup() {
